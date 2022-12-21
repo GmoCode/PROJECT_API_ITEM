@@ -48,7 +48,7 @@ public class ItemController {
 
         Item obj = service.readById(dto.getItemId());
             if(obj == null){
-                throw  new ModelNotFoundException("ID NOT FOUND: " + dto.getItemId() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+                throw  new ModelNotFoundException("ID NOT FOUND: " + dto.getItemId());
             }
 
         service.updateItem(dto);
